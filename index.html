@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding Questions Template</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{display:flex;background:#f5f6fa}
+
+/* sidebar */
+.sidebar{
+width:260px;
+height:100vh;
+background:#0f172a;
+color:white;
+overflow-y:auto;
+position:fixed;
+}
+
+.logo{
+padding:20px;
+font-size:20px;
+font-weight:bold;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar h4{
+padding:15px 20px 5px;
+font-size:12px;
+color:#94a3b8;
+text-transform:uppercase;
+}
+
+.sidebar a{
+display:block;
+padding:10px 20px;
+color:#e2e8f0;
+text-decoration:none;
+font-size:14px;
+}
+
+.sidebar a:hover{
+background:#1e293b;
+}
+
+/* main */
+.main{
+margin-left:260px;
+width:100%;
+}
+
+.header{
+background:white;
+padding:15px 20px;
+border-bottom:1px solid #ddd;
+font-weight:bold;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+
+.title{
+font-size:26px;
+margin-bottom:10px;
+}
+
+.badge{
+display:inline-block;
+background:#e5f3ff;
+color:#0077cc;
+padding:4px 10px;
+border-radius:5px;
+font-size:12px;
+margin-bottom:15px;
+}
+
+h3{margin-top:20px;margin-bottom:10px}
+
+pre{
+background:#0f172a;
+color:#e2e8f0;
+padding:15px;
+border-radius:6px;
+overflow:auto;
+}
+
+.try-btn{
+background:#16a34a;
+color:white;
+border:none;
+padding:12px 18px;
+border-radius:6px;
+cursor:pointer;
+margin-top:15px;
+}
+
+.tabs{display:flex;gap:10px;margin-top:20px}
+.tab{padding:8px 14px;background:#eee;cursor:pointer;border-radius:5px}
+.tab.active{background:#111;color:white}
+
+.code-block{display:none;margin-top:10px}
+.code-block.active{display:block}
+
+.nav{
+display:flex;
+justify-content:space-between;
+margin-top:25px;
+}
+
+.nav button{
+padding:10px 16px;
+border:none;
+background:#111;
+color:white;
+border-radius:6px;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+<div class="logo">Coding Prep</div>
+
+<h4>TCS Coding Questions</h4>
+<a href="#">TCS Coding Questions 2025</a>
+<a href="#">TCS Coding Questions 2024</a>
+<a href="#">TCS Coding Questions 2023</a>
+<a href="#">TCS Coding Questions 2022</a>
+<a href="#">TCS Coding Questions 2021</a>
+
+<h4>Infosys Coding Questions</h4>
+<a href="#">Infosys Coding Questions 2025</a>
+<a href="#">Infosys Coding Questions 2024</a>
+<a href="#">Infosys Coding Questions 2023</a>
+<a href="#">Infosys Coding Questions 2022</a>
+
+<h4>Wipro Coding Questions</h4>
+<a href="#">Wipro Coding Questions 2025</a>
+<a href="#">Wipro Coding Questions 2024</a>
+<a href="#">Wipro Coding Questions 2023</a>
+
+<h4>Accenture Coding Questions</h4>
+<a href="#">Accenture Coding Questions 2025</a>
+<a href="#">Accenture Coding Questions 2024</a>
+<a href="#">Accenture Coding Questions 2023</a>
+
+<h4>Amazon Coding Questions</h4>
+<a href="#">Amazon Coding Questions</a>
+<a href="#">Amazon DSA Questions</a>
+
+</div>
+
+<div class="main">
+<div class="header">TCS Coding Questions 2025</div>
+
+<div class="container">
+
+<div class="card">
+<div class="title">Sum of Two Numbers</div>
+<div class="badge">TCS NQT 2025</div>
+
+<h3>Problem Statement</h3>
+<p>Write a program to find sum of two numbers.</p>
+
+<h3>Input</h3>
+<p>Two integers A and B</p>
+
+<h3>Output</h3>
+<p>Print sum of A and B</p>
+
+<h3>Example</h3>
+<pre>
+Input:
+5 10
+
+Output:
+15
+</pre>
+
+<button class="try-btn" onclick="openCompiler()">Try it Yourself »</button>
+
+<h3>Solutions</h3>
+
+<div class="tabs">
+<div class="tab active" onclick="showTab(0)">C</div>
+<div class="tab" onclick="showTab(1)">C++</div>
+<div class="tab" onclick="showTab(2)">Java</div>
+<div class="tab" onclick="showTab(3)">Python</div>
+</div>
+
+<div class="code-block active">
+<pre>
+#include<stdio.h>
+int main(){
+int a,b;
+scanf("%d %d",&a,&b);
+printf("%d",a+b);
+}
+</pre>
+</div>
+
+<div class="code-block">
+<pre>
+#include<iostream>
+using namespace std;
+int main(){
+int a,b;
+cin>>a>>b;
+cout<<a+b;
+}
+</pre>
+</div>
+
+<div class="code-block">
+<pre>
+import java.util.*;
+class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int a=sc.nextInt();
+int b=sc.nextInt();
+System.out.println(a+b);
+}
+}
+</pre>
+</div>
+
+<div class="code-block">
+<pre>
+a,b=map(int,input().split())
+print(a+b)
+</pre>
+</div>
+
+<div class="nav">
+<button>❮ Previous</button>
+<button>Next ❯</button>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script>
+function showTab(i){
+let tabs=document.querySelectorAll('.tab');
+let blocks=document.querySelectorAll('.code-block');
+
+tabs.forEach(t=>t.classList.remove('active'));
+blocks.forEach(b=>b.classList.remove('active'));
+
+tabs[i].classList.add('active');
+blocks[i].classList.add('active');
+}
+
+function openCompiler(){
+const html=`<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{margin:0;font-family:Arial}
+.top{background:#111;color:white;padding:10px}
+textarea{width:50%;height:100vh;border:none;padding:10px;font-family:monospace}
+iframe{width:50%;height:100vh;border:none}
+.wrap{display:flex}
+button{margin-left:10px}
+</style>
+</head>
+<body>
+<div class="top">
+Try it Yourself
+<button onclick="run()">Run</button>
+</div>
+<div class="wrap">
+<textarea id="code"><h1>Hello</h1></textarea>
+<iframe id="out"></iframe>
+</div>
+<script>
+function run(){
+document.getElementById('out').srcdoc=document.getElementById('code').value;
+}
+run();
+<\/script>
+</body>
+</html>`;
+
+const blob=new Blob([html],{type:'text/html'});
+window.open(URL.createObjectURL(blob));
+}
+</script>
+
+</body>
+</html>
